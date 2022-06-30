@@ -1,2 +1,2 @@
 # kites
-JS/CSS visualizer with interactive JavaScript oscillator soundtrack
+JS/CSS visualizer with interactive JavaScript oscillator soundtrack. Works best in Chrome or Firefox.
