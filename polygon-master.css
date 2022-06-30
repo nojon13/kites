@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+#button-container {
+    position: relative;
+    z-index: 4;
+}
+
+button {
+    margin: 200px auto;
+    background-color: white;
+    font-weight: 900;
+    width: 100px;
+    height: 100px;
+    opacity: 0.8;
+    border: 0 solid;
+    border-radius: 100px;
+}
+
+#triangle-container {
+    visibility: hidden;
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(70, 208, 237, 0.5);
+    animation-name: bg-blend;
+    animation-duration: 10s;
+    animation-delay: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    position: relative;
+    background-image: url("img/background-crops/countryside1.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+
+
+}
+.shape1 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #ccc50c;
+    opacity: 0.7;
+    z-index: 1;
+    animation-name: morph1;
+    animation-duration: 37s, 80s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+}
+
+.shape2 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0c85cc;
+    opacity: 0.7;
+    z-index: 2;
+    animation-name: morph2;
+    animation-delay: 0.2s;
+    animation-duration: 30s, 60s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+}
+
+.shape3 {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: #cc0c0c;
+    opacity: 0.7;
+    z-index: 3;
+    animation-name: morph3;
+    animation-delay: 0.4s;
+    animation-duration: 25s, 70s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+
+.reverse {
+    animation-direction: alternate-reverse;
+}
+
+.reverse-blue {
+    animation-direction: reverse;
+}
+
+
+@keyframes morph1 {
+
+                100% {clip-path: polygon(3% 8%, 80.48% 94.71%, 80% 50%);}
+                }
+
+@keyframes morph2 {
+
+                100% {clip-path: polygon(2% 4%, 66% 26%, 90% 52%);}
+                }
+
+@keyframes morph3 {
+
+                100% {clip-path: polygon(10% 6%, 50% 20%, 62% 75%);}
+                }
+
+@keyframes bg-blend {
+                100% {background-color: rgba(36, 190, 240, 0.5);}
+}
